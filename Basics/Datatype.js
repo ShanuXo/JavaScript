@@ -22,3 +22,82 @@ symbol(to find uniqueness)
 console.log(typeof "Shanu");
 console.log(typeof null);
 console.log(typeof undefined);
+
+// Dataype conversion and Operation
+let score="33"
+console.log(typeof score)
+//using method
+console.log(typeof(score))
+
+// **********************Typecast : Coversion*******************
+
+let score2="33abc"
+let valueInNumber=Number(score2)
+console.log(typeof valueInNumber) //output number
+console.log(valueInNumber)//output NaN(Not an Number)
+
+let score3=undefined
+let value=Number(score2)
+console.log(typeof value) //output number
+console.log(value)//output NaN(Not an Number)
+
+let bool=true;
+let ans=Number(bool)
+console.log(typeof ans);
+console.log(ans)
+
+
+
+let isLoggedInn=1
+let boolLoggedIn=Boolean(isLoggedInn)
+console.log(typeof boolLoggedIn)
+console.log(boolLoggedIn)
+
+
+let namify="Shanu"
+let stringtoboolean=Boolean(namify)
+console.log(typeof stringtoboolean)
+console.log(stringtoboolean)
+
+// 1 => true
+// 0 => false
+//"" => false
+// "shanu" => true
+
+let numberToString=33
+let stringNumber=String(numberToString)
+console.log(typeof stringNumber)
+console.log(stringNumber)
+
+// ***********************Operation***********************
+
+let val=3
+let negval=-val
+console.log(negval);
+//power
+console.log(2**2)
+ let str1="Hello"
+ let str2=" Shanu"
+ console.log(str1+str2);
+ console.log("1"+2)//Output = 12
+ console.log(1+"2") // Output = 12
+//  what if 
+console.log("1"+2+2)// output = 122
+console.log(1+2+"2") //output = 32
+
+console.log(true) //output = 1
+console.log(+true)//output = 1
+// console.log(true+)//output = error 
+
+//Increment and Decrement
+let a=3
+let x=a++;
+console.log(`a:${a}, x:${x}`)
+
+let b=3
+let y=++b
+console.log(`b:${b},y:${y}`)
+
+// ************************Comparison**********************
+
+
