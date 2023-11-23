@@ -100,4 +100,14 @@ console.log(`b:${b},y:${y}`)
 
 // ************************Comparison**********************
 
+console.log("2">1)// Output : true
+console.log("02">1)// output : true
 
+console.log(null > 0) //op : false
+console.log(null == 0)//Op : false
+console.log(null >= 0)//Op : true
+
+console.log(undefined==0)//Op:false
+
+//Strict check :
+console.log( "2" === 2) //Op: false
