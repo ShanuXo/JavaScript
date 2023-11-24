@@ -111,3 +111,43 @@ console.log(undefined==0)//Op:false
 
 //Strict check :
 console.log( "2" === 2) //Op: false
+
+//Primitive datatypes in JS : Number,Symbol,Boolean ,Undefined,Null,Bigint,symbol
+//Non-Primitive Datatype in JS (Reference) : Array,Object,Function
+
+//Declare a Symbol
+
+const id=Symbol('123')
+const anotherId=Symbol('123')
+console.log(id==anotherId)
+
+//Declartion of an Arrays
+const hero=["Ironman","Shaktiman","Superman"];
+//Declartion of Object
+let myObj={
+    Name:"Shanu",
+    Age:22
+}
+//Declartion of a Function
+function myFunc()
+{
+    console.log("Hi, i am a function")
+}
+console.log(hero);
+console.log(myObj)
+console.log(myFunc())
+console.log(myFunc)
+
+// *****************Typeof Value of Datatype*******************
+/*
+Undefined = undefined
+Null = object
+Boolean = boolean
+Number= number
+String = string
+*/
+
+let ax=null
+console.log(typeof ax);
+
+
