@@ -31,3 +31,27 @@ const ingredientsListDeepCopy = JSON.parse(JSON.stringify(ingredientsList));
 
 */
 
+
+
+let arr=[1,2,3,4]
+console.log(arr.includes(5));
+console.log(arr.indexOf(4));
+console.log(arr.indexOf(9));
+
+//Array to String
+
+ let newArr=arr.join();
+ console.log(arr)
+ console.log(newArr)
+ console.log(typeof newArr)
+
+
+ //Slice and Splice
+ console.log("Slice");
+console.log(`A : ${arr}`)
+ const a1=arr.slice(0,3)
+ console.log(`New array ${a1}`);
+ //Splice
+ console.log("Splice")
+ const a2=arr.splice(0,3)
+ console.log(`New Array ${a2}`);
