@@ -33,7 +33,7 @@ const ingredientsListDeepCopy = JSON.parse(JSON.stringify(ingredientsList));
 
 
 
-let arr=[1,2,3,4]
+let arr=[1,2,3,4,5,6,7,8,9]
 console.log(arr.includes(5));
 console.log(arr.indexOf(4));
 console.log(arr.indexOf(9));
@@ -48,10 +48,46 @@ console.log(arr.indexOf(9));
 
  //Slice and Splice
  console.log("Slice");
+ console.log(arr);
 console.log(`A : ${arr}`)
- const a1=arr.slice(0,3)
+ const a1=arr.slice(1,3)
  console.log(`New array ${a1}`);
- //Splice
+ //Splice : for adding, deleting or any modification in an array
  console.log("Splice")
  const a2=arr.splice(0,3)
  console.log(`New Array ${a2}`);
+
+ //Array: Part 2
+ const marvel=["Ironman","Spiderman","Thor"]
+ const dc=["Superman","Batman","Flash"]
+ //marvel.push(dc);// OP ; [ 'Ironman', 'Spiderman', 'Thor', [ 'Superman', 'Batman', 'Flash' ] ]
+
+ const str=marvel.concat(dc)//OP :[ 'Ironman', 'Spiderman', 'Thor', 'Superman', 'Batman', 'Flash' ] 
+ //console.log(marvel);
+ console.log(str);
+
+ // SPREAD Operator
+ const allHero=[...marvel,...dc]
+ console.log(allHero);
+
+ const newarray=[1,2,3,[4,5,6],7,[6,7,[4,5]]]
+const useablenewArray=newarray.flat(Infinity);
+console.log(useablenewArray);/*OP:[
+    1, 2, 3, 4, 5,
+    6, 7, 6, 7, 4,
+    5
+  ] 
+  */
+
+  // Convert the object into array
+console.log(Array.isArray("Shanu"))
+console.log(Array.from("Shanu"))
+console.log(Array.from({name:"shanu"}))//Interview
+
+let score1=100;
+let score2=200;
+let score3=300;
+let score4=400;
+console.log(Array.of(score1,score2,score3,score4));
+
+
