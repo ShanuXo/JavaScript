@@ -45,3 +45,38 @@ addTwoNumber(3,"a");
  }
  console.log(login("shanu"));
  console.log(loginUser());
+
+//  *********Infinite Number of arguement********
+//Rest Operator(...variable)
+function calculateCartPrice(...num1)
+{
+    var sum=0;
+    for(let i=0;i<num1.length;i++)
+    {
+        sum+=num1[i];
+    }
+    return sum;
+}
+console.log(calculateCartPrice(200,500,600,800));
+
+const user={
+    username:"shanu",
+    phoneNumber:"9304641125"
+}
+function handleObjectinFunction(anyObject)
+{
+    console.log(`Username is ${anyObject.username} and Phonenumber is ${anyObject.phoneNumber}`);
+}
+handleObjectinFunction(user);
+handleObjectinFunction({
+    username:"Shanu Kumar",
+    phoneNumber:"123456789"
+})
+
+const myArr=[10,20,30,40,50,60];
+function returnSecondValue(getArray)
+{
+    return getArray[1];
+}
+console.log(returnSecondValue(myArr));
+console.log(returnSecondValue([100,200,300,400]));
