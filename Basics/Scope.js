@@ -48,3 +48,31 @@ function one()
     two();
 }
 one();
+
+if(true)
+{
+    const name="Shanu";
+    if(name === "Shanu")
+    {
+        const web="netflix";
+        console.log(name+" "+web);
+    }
+    //console.log(web);
+}
+//console.log(name);
+
+// *****Intresting Example*******
+
+function addone(num)
+{
+    return num+1;
+}
+addone(5);
+//console.log(addone(5));
+
+addtwo(5);//OP : ReferenceError: Cannot access 'addtwo' before initialization
+const addtwo=function(num)
+{
+    return num+2;
+}
+
