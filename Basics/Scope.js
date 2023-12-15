@@ -31,3 +31,20 @@ function sum(myArray)
     return sum;
 }
 console.log(sum(myArry));
+console.log(typeof(typeof(10)))
+
+// *****************Scope Level and Mini Hoisting ******************************
+
+function one()
+{
+    const username="Shanu";
+    function two()
+    {
+        const website="youtube";
+        console.log(username);
+        console.log(website);
+    }
+    //console.log(website);//Op: website is not defined;
+    two();
+}
+one();
