@@ -8,6 +8,7 @@ console.log(this); // OP : {} -global Execution Context
 /*
 {} -> Memory Execution Phase
    -> Execution Phase
+   -> NVE +Thread
 */
 
 let val1=10;
