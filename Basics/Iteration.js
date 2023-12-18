@@ -32,3 +32,26 @@ for(let i=0;i<=5;i++)
     }
     console.log(i);
 }
+
+//While Loop :
+console.log("hi");
+function sum(n)
+{
+   let sum=0;
+  while(n != 0)
+  {
+    let rem=n%10;
+    sum=(sum)+rem;
+    n=n/10;
+   }
+return sum;
+} 
+console.log(sum(54898));
+
+// do while loop
+let score=1;
+
+do{
+    console.log(`Score is ${score}`);
+    score++;
+} while(score <= 10);
