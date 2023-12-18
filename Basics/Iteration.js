@@ -55,3 +55,27 @@ do{
     console.log(`Score is ${score}`);
     score++;
 } while(score <= 10);
+
+
+// High Order Array Loops
+
+const array=[1,2,3,4,5,6]
+for(const num of array)
+{
+    console.log(num);
+}
+const greetings="Hello Xo Tech Programming"
+for (const greet of greetings) {
+    if(greet===" ")
+    {
+        continue;
+    }
+    console.log(`Each char is ${greet}`);
+}
+
+
+//Maps
+const maps=new Map();
+maps.set('a',1);
+maps.set('b',2);
+console.log(maps);
