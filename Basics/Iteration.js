@@ -79,3 +79,73 @@ const maps=new Map();
 maps.set('a',1);
 maps.set('b',2);
 console.log(maps);
+console.log("Hey");
+// For-in loop are not applicable in maps(as they are not iterable)
+// for (const key in maps) {
+//     console.log(key);
+// }
+
+for (const [keys,values] of maps) {
+    // console.log(keys);
+    // console.log(values);
+    console.log(keys + "->"+ values);
+}
+
+
+// For Iteration in Object we generally use For-In loop
+
+const myObj={
+    js:"JavaScript",
+    cpp:"C++",
+    java:"Javac",
+    rb:"Ruby",
+    rst:"Rust",
+    swift:"swift by apple"
+}
+for (const key in myObj) {
+    //console.log(key); // For displaying keys;
+    //console.log(myObj[key]);// for displaying Values;
+    console.log(`${key} -> ${myObj[key]}`);
+}
+
+//Arrays : for in loop
+
+const arr=["js","cpp","java","py","rb"]
+for (const key in arr) {
+    //console.log(key);
+    console.log(arr[key]);
+}
+
+// For-Each Loop
+
+const animal=["cat","dog","lion","penguin"];
+console.log(animal);
+
+animal.forEach((item,index,arr) => {
+    console.log(item,index,arr);
+});
+
+const print=(val)=>{
+    console.log(val);
+}
+animal.forEach(print)
+
+const myCoding=[
+    {
+        languageName:"Javascript",
+        fileNameExtension:".js"
+    },
+    {
+        languageName:"Java",
+        fileNameExtension:".java"
+    },
+    {
+        languageName:"Python",
+        fileNameExtension:".py"
+    }
+];
+
+myCoding.forEach((item)=>{
+    //console.log(item.languageName);
+    console.log(`${item.languageName} and their extension ${item.fileNameExtension}`);
+})
