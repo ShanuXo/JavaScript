@@ -46,3 +46,67 @@ console.log(userBooks);
 
 let user2=books.filter((bks)=>{ return bks.price>159 && bks.genre==='Fiction'})
 console.log(user2);
+
+//Map in JS
+
+const myNumber=[1,2,3,4,5,6,7,8,9,10];
+// const newNums=myNumber.map((num)=> num+10)
+const newNums=myNumber.map((num)=> {return num+10})
+
+console.log(newNums);
+
+//Chaning in js
+
+const chain=myNumber
+                    .map((num)=> num*10)
+                    .map((num)=>num+1)
+                    .map((num)=> num*2)
+                    .filter((num)=> num>=39);
+console.log(chain);
+
+/*Reduce in JS : The reduce() method executes a user-supplied "reducer" callback
+function on each element of the Array,in order,passing in the return value from the calculation on the preceding element.
+*/
+
+
+const arr2=[1,2,3,4,5];
+
+const myTotal=arr2.reduce(function (accumulator,currentvalue) {
+    console.log(`Accumulator : ${accumulator} and CurrentValue : ${currentvalue}`)
+    return accumulator+currentvalue
+},0)//here 1 is accumulator ka value;
+console.log(myTotal);
+//Arrow Function
+const myTot=arr2.reduce((acc,curr)=> acc+curr,0);
+console.log(myTot);
+
+
+const shoppimgCart=[
+    {
+        itemName:"Mastery JS",
+        price:199
+    },
+    {
+        itemName:".NET Development",
+        price:899
+    },
+    {
+        itemName:"DSA",
+        price:1999
+    },
+    {
+        itemName:"MERN Stack",
+        price:599
+    },
+    {
+        itemName:"Mobile Development",
+        price:2999
+   },
+    {
+        itemName:"Data Science",
+        price:2999
+    }
+];
+
+const priceToPay=shoppimgCart.reduce((accumulator,item)=>accumulator+item.price,0);
+console.log(priceToPay);
