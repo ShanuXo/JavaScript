@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Gallery</h2>
+    <div>
+        <ul id="images">
+            <li><img width="300px" id="bike" src="https://content2.kawasaki.com/ContentStorage/KMC/Products/9133/43e6ce94-a1a2-4542-8237-52fa21416c89.png?w=767"
+            alt="bike"</li>
+            <li><img width="300px" id="car" src="https://cdn-ds.com/blogs-media/sites/68/2022/08/09162705/pomblog-header_220922.png"
+                alt=""</li>
+            <li><img width="300px" id="ship" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/RP3JYYZ4M5MCLBKIGATSQVHIOI.jpg"
+                alt=""</li>
+            <li><img width="300px" id="aeroplane" src="https://feeds.abplive.com/onecms/images/uploaded-images/2022/09/03/5d630e63f64a76b095b63cfe5410ee371662200310871537_original.jpg?impolicy=abp_cdn&imwidth=720"
+                alt=""</li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>        
+        </ul>
+    </div>
+</body>
+<script>
+    //Approach-1
+    // document.getElementById('bike').onclick = function()
+    // {
+    //     alert('Ninja H2R');
+    // }
+
+    //Approach - 2
+        //type,timestamp,defaultPrevented,target,toElement,srcElement,currentTarget,clientX,clientY,screenX,screenY,altkey,shiftKey,keyCode
+    
+    /* Event Propagation :
+        Two context of Venet Propagation
+        1.Event Bubbling
+        2.Event Capturing
+    */  
+        document.getElementById('images').addEventListener('click',function(e){
+        alert("All Imges Has Been Clicked");
+        // console.log(e.timeStamp);
+        // console.log(e.view);
+    },false)
+
+    document.getElementById('car').addEventListener('click',function(e){
+        alert('Bugatti Mistral');
+        e.stopPropagation();
+    },false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();//stop bubbling
+        console.log("Google Clicked");        
+    },false)
+
+    //Approach - 3 -(attachEvent())
+    //Approach-jQuery-On
+
+
+    // Small Project : If i click on any of these images it should vanishes
+    document.querySelector('#images').addEventListener
+    ('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName=='IMG')
+        {
+            console.log(e.target.id);;
+            let removeImage=e.target.parentNode
+        removeImage.remove();
+        }
+        
+        //removeImage.parentNode.removeChild(removeImage);
+    },false)
+
+</script>
+</html>
