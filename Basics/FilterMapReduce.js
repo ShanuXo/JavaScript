@@ -110,3 +110,27 @@ const shoppimgCart=[
 
 const priceToPay=shoppimgCart.reduce((accumulator,item)=>accumulator+item.price,0);
 console.log(priceToPay);
+
+
+const arr = [5,1,3,2,6];
+
+function double (n)
+{
+    return n*2;
+}
+function triple (n)
+{
+    return n*3;
+}
+
+// function binary(n)
+// {
+//     return n.toString(2);
+// }
+const newArray = arr.map(double);
+const newArray2 = arr.map(triple);
+const newArray3 = arr.map((x) => x.toString(2));//passing anonymous function
+
+console.log(newArray);
+console.log(newArray2);
+console.log(newArray3);
